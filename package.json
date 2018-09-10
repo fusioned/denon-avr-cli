@@ -1,0 +1,64 @@
+{
+  "name": "denon",
+  "description": "Control Denon AVR",
+  "version": "0.0.1",
+  "author": "Fai Yip @fusioned",
+  "bin": {
+    "denon": "./bin/run"
+  },
+  "bugs": "https://github.com/fusioned/denon/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "eslint-config-airbnb": "17.1.0",
+    "qs": "^6.5.2",
+    "yarn": "^1.9.4"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "@oclif/test": "^1",
+    "chai": "^4",
+    "eslint": "^5.3.0",
+    "eslint-config-oclif": "^3",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "globby": "^8",
+    "mocha": "^5",
+    "nock": "^9.6.1",
+    "nyc": "^12"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/fusioned/denon",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "denon",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "fusioned/denon",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json npm-shrinkwrap.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme && npm shrinkwrap",
+    "test": "nyc mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
