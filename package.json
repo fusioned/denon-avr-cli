@@ -15,7 +15,7 @@
     "cheerio": "^1.0.0-rc.2",
     "eslint-config-airbnb": "17.1.0",
     "qs": "^6.9.7",
-    "yarn": "^1.9.4"
+    "yarn": "^1.22.13"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
